@@ -1,0 +1,8 @@
+#READ ME 
+This project proposes a proof-of-concept Retrieval-Augmented Generation (RAG) financial intelligence system that combines financial news, stock-price data, and SEC filings into a searchable intelligence layer. The system uses semantic retrieval with a local Chroma vector database to fetch relevant financial context and generate grounded answers for broker questions using large language models. Brokers can ask plain-English questions such as market sentiment analysis, company-risk queries, filing-related questions, or cross-market comparisons and receive evidence-backed responses.
+
+To improve the quality and reliability of generated answers, the system introduces a DeepEval-based prompt optimization workflow using GEPA (Genetic-Pareto Prompt Optimization). Instead of manually refining prompts, the workflow uses benchmark financial question-answer examples and evaluation metrics such as faithfulness, groundedness, relevance, and actionability to optimize the final answering prompt.
+
+The project also evaluates multiple RAG configurations by tuning retrieval and generation parameters such as chunk size, chunk overlap, number of retrieved chunks, temperature, top-p, and maximum token limits. Each configuration is evaluated using DeepEval metrics to identify the most effective combination for grounded financial reasoning and broker-style question answering.
+
+The final system uses the optimized prompt together with the best-performing RAG configuration to generate accurate, grounded, and production-style financial intelligence responses for broker workflows.
